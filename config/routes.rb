@@ -9,6 +9,9 @@ MyApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
   match '/signup', to: 'users#new'
 
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+
   get "static_pages/home"
 
   get "static_pages/help"

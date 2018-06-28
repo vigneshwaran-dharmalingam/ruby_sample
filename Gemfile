@@ -21,6 +21,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'bcrypt-ruby', '3.0.1'
+
+
+group :development do
+  gem 'annotate', '2.5.0'
+end
+
 group :test do
   gem 'capybara', '1.1.2'
 end
@@ -28,6 +35,9 @@ end
 gem 'jquery-rails'
 
 gem 'test-unit'
+gem 'rake', '< 11.0'
+
+gem 'sidekiq'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
